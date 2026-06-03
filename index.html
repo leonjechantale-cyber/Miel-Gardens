@@ -33,6 +33,27 @@ h1{
     max-width:700px;
     line-height:1.8;
 }
+    .mensive-generator{
+    margin-top:30px;
+}
+
+.mensive-generator input{
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    width:250px;
+    max-width:80%;
+    text-align:center;
+    margin-right:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+#greetingResult{
+    margin-top:20px;
+    font-size:1.2rem;
+    line-height:1.8;
+    font-style:italic;
+}
 
 .flower{
     font-size:3rem;
@@ -155,6 +176,37 @@ body{
         my sunshine after rain, my comfort after long days,
         and the love I choose in every season. 🌸
     </p>
+<div class="mensive-generator">
+    <input
+        type="text"
+        id="visitorName"
+        placeholder="Enter your name 🌷"
+    >
+
+    <button onclick="generateGreeting()" class="love-button">
+        Send Mensive Wishes 💕
+    </button>
+<script>
+function generateGreeting() {
+
+    const name = document
+        .getElementById("visitorName")
+        .value
+        .trim();
+
+    if(name === "") {
+        document.getElementById("greetingResult").innerHTML =
+            "🌷 Please enter your name first.";
+        return;
+    }
+
+    document.getElementById("greetingResult").innerHTML =
+        `💌 <strong>${name}</strong> said:<br><br>
+        Happy 28th Mensive to Leonie and Miel! 🌹💕`;
+}
+</script>
+    <div id="greetingResult"></div>
+</div>
 
 </section>
 
@@ -304,11 +356,11 @@ function openLetter() {
     </p>
 
     <button onclick="getFortune()" class="love-button">
-        Open a Fortune Cookie ✨
+        Please press this whenever you want, My Husband.
     </button>
 
     <div id="fortuneBox" class="letter" style="display:block;">
-        Click the cookie to reveal your fortune 🌷
+        Your luckiness starts with 100% Leonie!
     </div>
 </div>
     <script>
