@@ -253,26 +253,6 @@ of blooming, growing, and loving together 💕
 </div>
 `;
 </script>
-<script>
-const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicBtn");
-
-function toggleMusic() {
-    if (music.paused) {
-        music.play();
-        musicBtn.innerHTML = "⏸️ Pause Our Song";
-    } else {
-        music.pause();
-        musicBtn.innerHTML = "🎵 Play Our Song";
-    }
-}
-    #musicBtn{
-    position:fixed;
-    top:20px;
-    right:20px;
-    z-index:10000;
-}
-</script>
     <div class="card">
     <h2>💌 A Letter For Miel</h2>
 
@@ -361,6 +341,26 @@ function getFortune() {
 
     document.getElementById("fortuneBox").innerHTML =
         randomFortune;
+}
+</script>
+    <script>
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = "⏸️ Pause Our Song";
+    } else {
+        music.pause();
+        musicBtn.innerHTML = "🎵 Play Our Song";
+    }
+}
+    #musicBtn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:10000;
 }
 </script>
 </body>
