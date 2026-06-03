@@ -137,6 +137,9 @@ body{
     }
 }
 </style>
+    <audio id="bgMusic" loop>
+    <source src="youre-my-garden.mp3" type="audio/mpeg">
+</audio>
 </head>
 
 <body>
@@ -250,7 +253,26 @@ of blooming, growing, and loving together 💕
 </div>
 `;
 </script>
+<script>
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        musicBtn.innerHTML = "⏸️ Pause Our Song";
+    } else {
+        music.pause();
+        musicBtn.innerHTML = "🎵 Play Our Song";
+    }
+}
+    #musicBtn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:10000;
+}
+</script>
 setInterval(createPetal, 500);
 </script>
     <div class="card">
