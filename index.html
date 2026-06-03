@@ -99,29 +99,6 @@ body{
 
 /* existing CSS */
 
-/* Falling petals */
-.petal {
-    position: fixed;
-    top: -10vh;
-    font-size: 24px;
-    pointer-events: none;
-    z-index: 9999;
-    animation-name: fall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-10vh) rotate(0deg);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0.7;
-    }
-}
     .love-button{
     padding:12px 24px;
     border:none;
@@ -273,25 +250,6 @@ of blooming, growing, and loving together 💕
 </div>
 `;
 </script>
-<script>
-const flowers = ["🌸", "🌷", "🌹", "🌺"];
-
-function createPetal() {
-    const petal = document.createElement("div");
-
-    petal.classList.add("petal");
-    petal.innerHTML =
-        flowers[Math.floor(Math.random() * flowers.length)];
-
-    petal.style.left = Math.random() * 100 + "vw";
-    petal.style.fontSize = (20 + Math.random() * 20) + "px";
-    petal.style.animationDuration =
-        (8 + Math.random() * 8) + "s";
-
-    document.body.appendChild(petal);
-
-    setTimeout(() => petal.remove(), 16000);
-}
 
 setInterval(createPetal, 500);
 </script>
