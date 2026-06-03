@@ -1,0 +1,157 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miel's Garden</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Georgia, serif;
+    background:linear-gradient(to bottom, #fff8f9, #f5fff4);
+    color:#4b3f4e;
+    text-align:center;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+h1{
+    font-size:4rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:1.3rem;
+    max-width:700px;
+    line-height:1.8;
+}
+
+.flower{
+    font-size:3rem;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:24px;
+    width:80%;
+    max-width:750px;
+    margin:40px auto;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card h2{
+    margin-top:0;
+}
+
+footer{
+    padding:50px 20px;
+    font-style:italic;
+    opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="flower">🌷 🌹 🦋</div>
+
+    <h1>Miel's Garden</h1>
+
+    <p class="subtitle">
+        Among thousands of flowers, I found my favorite bloom.
+        This little garden is dedicated to Miel —
+        my sunshine after rain, my comfort after long days,
+        and the love I choose in every season. 🌸
+    </p>
+
+</section>
+
+<div class="card">
+    <h2>🌹 Dear Miel</h2>
+
+    <p style="line-height:1.8;">
+        Thank you for being my favorite chapter,
+        my safest place, and the person who makes every day
+        feel softer, brighter, and more beautiful.
+        <br><br>
+        No matter how many seasons pass,
+        I hope our garden continues to bloom.
+    </p>
+</div>
+
+<div class="card">
+    <h2>🌿 Our Love Story</h2>
+    <p id="days"></p>
+</div>
+
+<footer>
+    🌷 "Among all the flowers in the world,
+    I would still choose you every season." 🌷
+</footer>
+
+<script>
+const startDate = new Date("2024-02-04");
+const today = new Date();
+
+let years = today.getFullYear() - startDate.getFullYear();
+let months = today.getMonth() - startDate.getMonth();
+let days = today.getDate() - startDate.getDate();
+
+if (days < 0) {
+    months--;
+
+    const previousMonth = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        0
+    );
+
+    days += previousMonth.getDate();
+}
+
+if (months < 0) {
+    years--;
+    months += 12;
+}
+
+document.getElementById("days").innerHTML = `
+<div style="font-size:1.2rem; line-height:1.9;">
+🌷 Together since <strong>February 4, 2024</strong><br><br>
+
+💍 <strong>${years}</strong> year${years !== 1 ? "s" : ""},
+<strong>${months}</strong> month${months !== 1 ? "s" : ""},
+and <strong>${days}</strong> day${days !== 1 ? "s" : ""}<br>
+
+of blooming, growing, and loving together 💕
+<br><br>
+
+🌹 Every season is more beautiful because of you, Miel.
+</div>
+`;
+</script>
+
+</body>
+</html>
+```
