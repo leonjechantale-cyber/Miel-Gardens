@@ -101,7 +101,43 @@ body{
         opacity: 0.7;
     }
 }
-</style>
+    .love-button{
+    padding:12px 24px;
+    border:none;
+    border-radius:30px;
+    font-size:1rem;
+    cursor:pointer;
+    background:white;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.love-button:hover{
+    transform:translateY(-2px);
+}
+
+.letter{
+    display:none;
+    margin-top:20px;
+    padding:25px;
+    text-align:left;
+    line-height:1.9;
+    background:#fffaf5;
+    border-radius:20px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 </style>
 </head>
 
@@ -207,6 +243,58 @@ function createPetal() {
 
 setInterval(createPetal, 500);
 </script>
+    <div class="card">
+    <h2>💌 A Letter For Miel</h2>
+
+    <button onclick="openLetter()" class="love-button">
+        Open My Letter 🌹
+    </button>
+
+    <div id="loveLetter" class="letter">
+        <p>
+            My dearest Miel,
+
+            <br><br>
+
+            Thank you for being the calm in my storms,
+            the warmth in my winters,
+            and the sunshine that makes every flower bloom.
+
+            <br><br>
+
+            Every day with you becomes a memory worth keeping,
+            and every season feels beautiful because you are in it.
+
+            <br><br>
+
+            No matter how many petals fall,
+            no matter how many years pass,
+            my heart will continue choosing you.
+
+            <br><br>
+
+            May our garden continue to bloom through every season,
+            and may every falling petal remind you how deeply you are loved.
+
+            <br><br>
+
+            Forever yours,
+            <br>
+            🌹 <strong>Leonie</strong> 🌹
+        </p>
+    </div>
+</div>
+    <script>
+function openLetter() {
+    const letter = document.getElementById("loveLetter");
+
+    if (letter.style.display === "block") {
+        letter.style.display = "none";
+    } else {
+        letter.style.display = "block";
+    }
+}
+</script>
 </body>
 </html>
-```
+
