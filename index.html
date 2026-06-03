@@ -295,6 +295,44 @@ function openLetter() {
     }
 }
 </script>
+    <h2>🫙 Miel's Lucky Fortune Jar</h2>
+    <div class="card">
+    <h2>🍪 Lucky Fortune Cookie Jar</h2>
+
+    <p>
+        Pick a fortune whenever you need a little extra love.
+    </p>
+
+    <button onclick="getFortune()" class="love-button">
+        Open a Fortune Cookie ✨
+    </button>
+
+    <div id="fortuneBox" class="letter" style="display:block;">
+        Click the cookie to reveal your fortune 🌷
+    </div>
+</div>
+    <script>
+const fortunes = [
+    "🌹 You are my favorite chapter and my favorite ending.",
+    "🌷 A garden blooms because of sunlight. Mine blooms because of you.",
+    "🦋 Today, remember that you are deeply loved.",
+    "💌 Somewhere in the world, someone is smiling because they thought of you. It's me.",
+    "🌸 Your hug is my safest place.",
+    "🍯 Lucky fortune: You will receive an extra kiss from Leonie soon.",
+    "✨ Every season is brighter with you in it.",
+    "🌹 The luckiest thing that ever happened to me was meeting you.",
+    "🌷 Your smile has a 100% chance of improving my day.",
+    "💕 Fortune says: Leonie loves you. Verified and permanent."
+];
+
+function getFortune() {
+    const randomFortune =
+        fortunes[Math.floor(Math.random() * fortunes.length)];
+
+    document.getElementById("fortuneBox").innerHTML =
+        randomFortune;
+}
+</script>
 </body>
 </html>
 
